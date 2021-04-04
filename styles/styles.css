@@ -1,0 +1,119 @@
+@font-face {
+    font-family: "Crete Round";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/CreteRound-Regular.ttf");
+}
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Lato/Lato-Regular.ttf");
+}
+.main-page {
+    position: relative;
+    background-color: #ffffff;
+    width: 1920px;
+    height: 1188px;
+
+}
+.header {
+    position: absolute;
+    width: 60px;
+    height: 43px;
+    left: 480px;
+    top: 60px;
+    font-family: Crete Round;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 43px;
+    color: #060C31;
+}
+.first-solution {
+    position: absolute;
+    width: 493px;
+    height: 192px;
+    left: 480px;
+    top: 193px;
+    font-family: Crete Round;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 58px;
+    line-height: 64px;
+    color: #060C31;
+
+}
+.using-lorem {
+    position: absolute;
+    width: 493px;
+    height: 84px;
+    left: 480px;
+    top: 421px;
+    letter-spacing: 0.75px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 28px;
+    color: #060C31;
+}
+.two-buttons {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    left: 480px;
+    top: 553px;
+    width: 332px;
+}
+.first-button {
+    width: 156px;
+    height: 50px;
+    background-color:#233fe2;
+    border-radius: 50px;
+
+}
+.first-button p{
+    margin: 0;
+    width: 81px;
+    height: 18px;
+    padding-left: 35px;
+    padding-top: 16px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    color: #ffffff;
+    letter-spacing: 0.4px;
+}
+.second-button {
+    width: 156px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid #ffb0b1;
+}
+.second-button p{
+    margin:0px;
+    padding-top: 16px;
+    padding-left: 27.5px;
+    width: 101px;
+    height: 18px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    color: #060C31;
+
+
+
+}
+
+
+img {
+    position: absolute;
+    left: 451px;
+    top: 631px;
+}
+

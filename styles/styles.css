@@ -15,7 +15,6 @@
     background-color: #ffffff;
     width: 1920px;
     height: 1188px;
-
 }
 .header {
     position: absolute;
@@ -42,7 +41,6 @@
     font-size: 58px;
     line-height: 64px;
     color: #060C31;
-
 }
 .using-lorem {
     position: absolute;
@@ -73,7 +71,6 @@
     height: 50px;
     background-color:#233fe2;
     border-radius: 50px;
-
 }
 .first-button p{
     margin: 0;
@@ -105,12 +102,7 @@
     font-weight: bold;
     font-size: 15px;
     color: #060C31;
-
-
-
 }
-
-
 img {
     position: absolute;
     left: 451px;

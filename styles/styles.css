@@ -10,8 +10,7 @@
     font-weight: 400;
     src: url("../fonts/Lato/Lato-Regular.ttf");
 }
-.main-page {
-    position: relative;
+body {
     background-color: #ffffff;
     width: 1920px;
     height: 1188px;
@@ -22,7 +21,7 @@
     height: 43px;
     left: 480px;
     top: 60px;
-    font-family: Crete Round;
+    font-family: Crete Round, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 34px;
@@ -35,7 +34,7 @@
     height: 192px;
     left: 480px;
     top: 193px;
-    font-family: Crete Round;
+    font-family: Crete Round, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 58px;
@@ -49,7 +48,7 @@
     left: 480px;
     top: 421px;
     letter-spacing: 0.75px;
-    font-family: Lato;
+    font-family: Lato, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -71,37 +70,41 @@
     height: 50px;
     background-color:#233fe2;
     border-radius: 50px;
-}
-.first-button p{
-    margin: 0;
-    width: 81px;
-    height: 18px;
-    padding-left: 35px;
-    padding-top: 16px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: bold;
     font-size: 15px;
+    font-family: Lato, sans-serif;
+    font-weight: bold;
     color: #ffffff;
     letter-spacing: 0.4px;
+}
+.first-button:hover {
+    background-color:#2359e2;
+}
+.first-button:active,
+.first-button:focus{
+    outline-style: none;
+    background-color:#2359e2;
+    box-shadow: 0 0 3px 2px #060C31;
 }
 .second-button {
     width: 156px;
     height: 50px;
+    background-color:#ffffff;
     border-radius: 50px;
     border: 1px solid #ffb0b1;
-}
-.second-button p{
-    margin:0px;
-    padding-top: 16px;
-    padding-left: 27.5px;
-    width: 101px;
-    height: 18px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: bold;
     font-size: 15px;
+    font-family: Lato, sans-serif;
+    font-weight: bold;
     color: #060C31;
+}
+.second-button:hover {
+    background-color: #cdced6;
+    border: 1px solid #fc5658;
+}
+.second-button:active,
+.second-button:focus{
+    outline-style: none;
+    background-color: #CDCED6;
+    border: 1px solid #fc5658;
 }
 img {
     position: absolute;

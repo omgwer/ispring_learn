@@ -99,12 +99,14 @@ body {
 .second-button:hover {
     background-color: #cdced6;
     border: 1px solid #fc5658;
+
 }
 .second-button:active,
 .second-button:focus{
     outline-style: none;
     background-color: #CDCED6;
     border: 1px solid #fc5658;
+    box-shadow: 0 0 3px 2px #f38c8e;
 }
 img {
     position: absolute;

@@ -2,25 +2,25 @@
     font-family: "Crete Round";
     font-style: normal;
     font-weight: 400;
-    src: url("../fonts/CreteRound-Regular.ttf");
+    src: url("../fonts/CreteRound-Regular.ttf") format("truetype");
 }
 @font-face {
     font-family: "Lato";
     font-style: normal;
     font-weight: 400;
-    src: url("../fonts/Lato/Lato-Regular.ttf");
+    src: url("../fonts/Lato-Regular.ttf") format("truetype");
 }
 body {
     background-color: #ffffff;
     width: 1920px;
     height: 1188px;
+    margin: 0;
 }
 .header {
-    position: absolute;
     width: 60px;
     height: 43px;
-    left: 480px;
-    top: 60px;
+    margin-top: 60px;
+    margin-left: 480px;
     font-family: Crete Round, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -29,11 +29,10 @@ body {
     color: #060C31;
 }
 .first-solution {
-    position: absolute;
+    margin-top: 90px;
+    margin-left: 480px;
     width: 493px;
     height: 192px;
-    left: 480px;
-    top: 193px;
     font-family: Crete Round, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -42,11 +41,10 @@ body {
     color: #060C31;
 }
 .using-lorem {
-    position: absolute;
     width: 493px;
     height: 84px;
-    left: 480px;
-    top: 421px;
+    margin-top: 36px;
+    margin-left: 480px;
     letter-spacing: 0.75px;
     font-family: Lato, sans-serif;
     font-style: normal;
@@ -56,14 +54,13 @@ body {
     color: #060C31;
 }
 .two-buttons {
-    position: absolute;
+    margin-top: 48px;
+    margin-left: 480px;
+    height: 50px;
+    width: 332px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
-    left: 480px;
-    top: 553px;
-    width: 332px;
 }
 .first-button {
     width: 156px;
@@ -109,8 +106,6 @@ body {
     box-shadow: 0 0 3px 2px #f38c8e;
 }
 img {
-    position: absolute;
-    left: 451px;
-    top: 631px;
+    margin-top: 28px;
+    margin-left: 451px;
 }
-

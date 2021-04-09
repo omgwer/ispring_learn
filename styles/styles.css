@@ -4,55 +4,64 @@
     font-weight: 400;
     src: url("../fonts/CreteRound-Regular.ttf") format("truetype");
 }
+
 @font-face {
     font-family: "Lato";
     font-style: normal;
     font-weight: 400;
     src: url("../fonts/Lato-Regular.ttf") format("truetype");
 }
+
 body {
     background-color: #ffffff;
     width: 1920px;
     height: 1188px;
     margin: 0;
 }
+
 .header {
+    display: block;
     width: 60px;
     height: 43px;
     margin-top: 60px;
     margin-left: 480px;
-    font-family: Crete Round, sans-serif;
+    font-family: "Crete Round", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 34px;
     line-height: 43px;
     color: #060C31;
 }
+
 .first-solution {
+    display: block;
     margin-top: 90px;
     margin-left: 480px;
     width: 493px;
     height: 192px;
-    font-family: Crete Round, sans-serif;
+    font-family: "Crete Round", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 58px;
     line-height: 64px;
     color: #060C31;
 }
+
 .using-lorem {
+    display: block;
     width: 493px;
     height: 84px;
     margin-top: 36px;
     margin-left: 480px;
     letter-spacing: 0.75px;
-    font-family: Lato, sans-serif;
+    font-family: "Lato", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
     line-height: 28px;
     color: #060C31;
 }
+
 .two-buttons {
     margin-top: 48px;
     margin-left: 480px;
@@ -62,27 +71,25 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
 .first-button {
     width: 156px;
     height: 50px;
     background-color:#233fe2;
     border-radius: 50px;
     font-size: 15px;
-    font-family: Lato, sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: bold;
     color: #ffffff;
     letter-spacing: 0.4px;
-    border: none;
+    text-align: center;
+    line-height: 50px;
 }
+
 .first-button:hover {
     background-color:#2359e2;
 }
-.first-button:active,
-.first-button:focus{
-    outline-style: none;
-    background-color:#2359e2;
-    box-shadow: 0 0 3px 2px #060C31;
-}
+
 .second-button {
     width: 156px;
     height: 50px;
@@ -90,22 +97,19 @@ body {
     border-radius: 50px;
     border: 1px solid #ffb0b1;
     font-size: 15px;
-    font-family: Lato, sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: bold;
     color: #060C31;
+    text-align: center;
+    line-height: 50px;
 }
+
 .second-button:hover {
-    background-color: #cdced6;
+    background-color: #eae9e9;
     border: 1px solid #f56567;
 }
-.second-button:active,
-.second-button:focus{
-    outline-style: none;
-    background-color: #CDCED6;
-    border: 1px solid #f56567;
-    box-shadow: 0 0 3px 2px #f38c8e;
-}
-img {
+
+.image-bottom {
     margin-top: 28px;
     margin-left: 451px;
 }

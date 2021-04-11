@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+}
+.container {
+    position: relative;
+    background-color: #ffffff;
+    width: 1440px;
+    height: 950px;
+}
+/* header    */
+.logo {
+    display: inline-block;
+    width: 60px;
+    height: 43px;
+    margin: 60px 0 0 88px;
+    font: normal normal 34px/43px "Crete Round", serif;
+    color: #060C31;
+    vertical-align: top;
+}
+
+.link {
+    font: normal bold 13px/28px "Lato", sans-serif;
+    color: #060C31;
+    text-decoration: none;
+}
+
+.navigation_links {
+    display: inline-block;
+    margin: 57px 0 0 582px;
+}
+
+.navigation_links .link:nth-child(1) {
+    margin-right: 35px;
+}
+
+.navigation_links .link:nth-child(2),
+.navigation_links .link:nth-child(3),
+.navigation_links .link:nth-child(4) {
+    margin-right: 36px;
+}
+
+.navigation_links .link:nth-child(5),
+.navigation_links .link:nth-child(6) {
+    margin-right: 37px;
+}
+
+.link.button_light {
+    padding: 12px 25px 14px 25px;
+    font: bold 15px/50px "Lato", sans-serif;
+}
+/* main    */
+.main_photo {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main_box {
+   margin: 63px 0 auto 200px;
+}
+
+.main_content {
+    width: 436px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main_title {
+    margin: 0;
+    position: absolute;
+    width: 449px;
+    height: 192px;
+    font: normal normal 58px/64px "Crete Round", serif;
+    color: #060C31;
+    top: 270px;
+    left: 200px;
+}
+
+.main_text {
+    display: block;
+    height: 84px;
+    width: 436px;
+    letter-spacing: 0.8px;
+    font: normal normal 15px/28px "Lato", sans-serif;
+    color: #060C31;
+    margin-top: 278px;
+    margin-bottom: 75px;
+    word-spacing: 1px;
+}
+
+.main_two_links {
+    height: 50px;
+    width: 332px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button_blue {
+    width: 156px;
+    height: 49px;
+    background-color: #233fe2;
+    border-radius: 50px;
+    font: bold 15px/50px "Lato", sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.4px;
+    text-align: center;
+}
+
+.button_blue:hover {
+    background-color: #2359e2;
+}
+
+.button_light {
+    width: 156px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    border: 1px solid #ffb0b1;
+    font: bold 15px/50px "Lato", sans-serif;
+    color: #060C31;
+    text-align: center;
+}
+
+.button_light:hover {
+    background-color: #eae9e9;
+    border: 1px solid #f56567;
+}
+/* footer   */
+.footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 823px;
+    height: 30px;
+    bottom: -104px;
+    left: 548px;
+}
+
+.footer img:nth-child(2),
+.footer img:nth-child(3),
+.footer img:nth-child(4),
+.footer img:nth-child(5){
+    transform: scale(0.65);
+}

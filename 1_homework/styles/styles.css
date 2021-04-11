@@ -19,7 +19,7 @@ body {
     margin: 0;
 }
 
-.header {
+.logo {
     display: block;
     width: 60px;
     height: 43px;
@@ -28,7 +28,7 @@ body {
     color: #060C31;
 }
 
-.description {
+.main_title {
     display: block;
     margin: 90px 0 0 480px;
     width: 493px;
@@ -56,7 +56,7 @@ body {
     align-items: center;
 }
 
-.first_link {
+.link_blue {
     width: 156px;
     height: 50px;
     background-color: #233fe2;
@@ -67,11 +67,11 @@ body {
     text-align: center;
 }
 
-.first_link:hover {
+.link_blue:hover {
     background-color: #2359e2;
 }
 
-.second_link {
+.link_light {
     width: 156px;
     height: 50px;
     background-color: #ffffff;
@@ -82,7 +82,7 @@ body {
     text-align: center;
 }
 
-.second_link:hover {
+.link_light:hover {
     background-color: #eae9e9;
     border: 1px solid #f56567;
 }

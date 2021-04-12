@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+}
+
+.main_page {
+    width: 1200px;
+    margin: 0 auto;
+    font: 15px/15px 'Fira Sans', sans-serif;
+
+}
+
+.header {
+    width: 1180px;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    height: 100px;
+    background-color: #caa4a4;
+    background-image: url("../image/header_image.jpg");
+    background-position-y: -40px;
+    box-shadow: 0px 1px 5px 2px #a2b9e6;
+    border-radius: 0 0 10px 10px;
+}
+
+.header_title {
+    width: 350px;
+    margin: 0 auto;
+    font-size: 35px;
+    padding-top: 45px;
+}
+
+.main_text {
+    margin: 100px auto auto 150px;
+}
+
+.block_homework {
+    margin-bottom: 25px;
+    width: 220px;
+    height: 100px;
+    background-color: #a2b9e6;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0px #a2b9e6;
+
+}
+
+.link_homework {
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 40px;
+    padding-bottom: 45px;
+    color: #060C31;
+}
+
+.link_homework:hover {
+    background-color: #9ab5f1;
+}

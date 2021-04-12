@@ -34,13 +34,13 @@ body {
 }
 
 .block_homework {
+    position: relative;
     margin-bottom: 25px;
     width: 220px;
     height: 100px;
-    background-color: #a2b9e6;
+    background-color: #86a5f3;
     border-radius: 5px;
     box-shadow: 0 0 3px 0px #a2b9e6;
-
 }
 
 .link_homework {
@@ -55,3 +55,18 @@ body {
 .link_homework:hover {
     background-color: #9ab5f1;
 }
+
+.link_download {
+    position: absolute;
+    right: -110px;
+    top: -0px;
+    border: 3px solid #9ab5f1;
+    padding: 17px;
+    border-radius: 5px;
+
+}
+
+.link_download:hover {
+    background-color: #c4d2f6;
+}
+

@@ -47,6 +47,10 @@
     border-radius: 5px;
     text-decoration: none;
 }
+
+.button_black:hover {
+    background-color: #EE58B6;
+}
 /*  */
 .title_container {
     display: flex;
@@ -185,6 +189,11 @@
     border-radius: 8px;
     color: #ffffff;
     padding: 33px 37px 37px 39px;
+}
+
+.block:hover {
+    background-color: #161616;
+    box-shadow: 0 0 3px 0 #000000;
 }
 
 .block img {

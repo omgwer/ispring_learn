@@ -3,14 +3,14 @@ body {
 }
 
 .main_page {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     font: 15px/15px 'Fira Sans', sans-serif;
 
 }
 
 .header {
-    width: 1180px;
+    max-width: 1180px;
     margin: 0 auto;
     position: sticky;
     top: 0;
@@ -70,3 +70,18 @@ body {
     background-color: #c4d2f6;
 }
 
+@media only screen and (max-width: 992px) {
+    .main_text {
+        margin-left: 0;
+    }
+
+    .block_homework {
+        width: 60vw;
+        margin-left: 15vw;
+        margin-right: auto;
+    }
+
+
+
+
+}

@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1680px;
+  margin: 30px auto 0;
+  align-items: center;
+
+  &__logo {
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    width: 815px;
+    align-items: center;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: #000000;
+  vertical-align: middle;
+  font: 500 16px/20px 'Montserrat', sans-serif;
+}
+
+.button_black {
+  font: 600 16px/16px 'Montserrat', sans-serif;
+  background-color: #05090C;
+  color: #ffffff;
+  padding: 19px 40px;
+  border-radius: 5px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #EE58B6;
+  }
+}

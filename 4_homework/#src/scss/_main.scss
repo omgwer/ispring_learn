@@ -165,6 +165,7 @@
 
   &__job-block {
     vertical-align: middle;
+    background-color: #ffffff;
   }
 
   &__name,
@@ -259,37 +260,31 @@
   }
 }
 
-.custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
-  border-color: #ee75c1;
+.custom-checkbox {
+  &:enabled:not(:checked)+label:hover::before {
+    border-color: #ee75c1;
+  }
+
+  &:enabled:active+label::before {
+    background-color: #ee75c1;
+    border-color: #ee75c1;
+  }
+
+  &:focus+label::before {
+    box-shadow: 0 0 0 0.1rem #ee75c1;
+  }
+
+  &:focus:not(:checked)+label::before {
+    border-color: #ee75c1;
+  }
+
+  &:checked+label::before {
+    border-color: #EE58B6;
+    background-color: #EE58B6;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+  }
+
+  &:disabled+label::before {
+    background-color: #e9ecef;
+  }
 }
-
-.custom-checkbox:not(:disabled):active+label::before {
-  background-color: #ee75c1;
-  border-color: #ee75c1;
-}
-
-.custom-checkbox:focus+label::before {
-  box-shadow: 0 0 0 0.1rem #ee75c1;
-}
-
-.custom-checkbox:focus:not(:checked)+label::before {
-  border-color: #ee75c1;
-}
-
-.custom-checkbox:checked+label::before {
-  border-color: #EE58B6;
-  background-color: #EE58B6;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
-}
-
-.custom-checkbox:disabled+label::before {
-  background-color: #e9ecef;
-}
-
-.checkbox {
-  margin-bottom: 1em;
-}
-
-
-
-

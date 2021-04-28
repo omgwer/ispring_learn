@@ -21,7 +21,6 @@
             <a href="#" class="button_black">Записаться на курс</a>
         </nav>
         </header>
-
         <section class="title-course main__title-course">
             <h2 class="visually-hidden">Заголовок статьи курса</h2>
             <div class="title-course__block">
@@ -116,17 +115,19 @@
                 Единственное, что нужно <em class="font-color_pink">сделать</em>
             </h2>
             <form method="get" action="" class="feedback-form feedback-block__feedback-form">
-                <input class="feedback-form__name" type="text" name="User_name"
-                       placeholder="Ваше имя" required>
-                <input class="feedback-form__email" type="email" name="User_email"
-                       placeholder="Email" required >
-                <select class="feedback-form__job-block" name="User_job"
-                        size="1" required >
-                    <option value="dev" class="feedback-form__job-list">Деятельность</option>
-                    <option value="dev" class="feedback-form__job-list">Программист</option>
-                    <option value="diz" class="feedback-form__job-list">Дизайнер</option>
-                    <option value="market" class="feedback-form__job-list">Маркетолог</option>
-                </select>
+                <label class="feedback-form__group">
+                    <input class="feedback-form__name" type="text" name="User_name"
+                           placeholder="Ваше имя" required>
+                    <input class="feedback-form__email" type="email" name="User_email"
+                           placeholder="Email" required >
+                    <select class="feedback-form__job-block" name="User_job"
+                            size="1" required >
+                        <option value="dev" class="feedback-form__job-list">Деятельность</option>
+                        <option value="dev" class="feedback-form__job-list">Программист</option>
+                        <option value="diz" class="feedback-form__job-list">Дизайнер</option>
+                        <option value="market" class="feedback-form__job-list">Маркетолог</option>
+                    </select>
+                </label>
                 <input class="feedback-form__submit" type="submit" value="Записаться на курс">
                 <div class="checkbox-block main__checkbox-block">
                     <input id="button" class="checkbox-block__button custom-checkbox" type="checkbox" name="spam_approve">
@@ -135,7 +136,6 @@
                     </label>
                 </div>
             </form>
-
         </section>
         <section class="author-course footer__author-course">
             <h2 class="visually-hidden">О авторе данного курса</h2>
@@ -154,11 +154,9 @@
             </p>
             <img class="author-course__socials" src="img/footer_social.png" alt="author-socials" width="166" height="48">
         </section>
-
         <div class="footer-logo">
             <a href="index.html"><img src="img/footer_logo.png" width="167" height="48" alt="logo"></a>
         </div>
     </div>
-
 </body>
 </html>

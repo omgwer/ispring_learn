@@ -159,11 +159,13 @@
 .feedback-form {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1420px;
+  width: 1430px;
   box-sizing: border-box;
   justify-content: space-between;
 
-
+  &__job-block {
+    vertical-align: middle;
+  }
 
   &__name,
   &__email,
@@ -287,7 +289,6 @@
 .checkbox {
   margin-bottom: 1em;
 }
-
 
 
 

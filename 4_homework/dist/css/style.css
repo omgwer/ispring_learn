@@ -265,6 +265,7 @@
 
 .feedback-form__job-block {
   vertical-align: middle;
+  background-color: #ffffff;
 }
 
 .feedback-form__name,
@@ -392,11 +393,11 @@
   background-size: 50% 50%;
 }
 
-.custom-checkbox:not(:disabled):not(:checked) + label:hover::before {
+.custom-checkbox:enabled:not(:checked) + label:hover::before {
   border-color: #ee75c1;
 }
 
-.custom-checkbox:not(:disabled):active + label::before {
+.custom-checkbox:enabled:active + label::before {
   background-color: #ee75c1;
   border-color: #ee75c1;
 }
@@ -418,10 +419,6 @@
 
 .custom-checkbox:disabled + label::before {
   background-color: #e9ecef;
-}
-
-.checkbox {
-  margin-bottom: 1em;
 }
 
 .footer__author-course {

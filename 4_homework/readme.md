@@ -1,1 +1,3 @@
-Pls check my scss files
+Pls check my scss files (/#src/scss)
+
+

@@ -197,7 +197,8 @@
     }
   }
 
-  &__job-list {
+  &__job-list,
+  &__job-block{
     font: 500 18px/22px 'Montserrat', sans-serif;
     color: #999999;
   }

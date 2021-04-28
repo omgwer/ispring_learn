@@ -301,7 +301,8 @@
   background-color: #EE58B6;
 }
 
-.feedback-form__job-list {
+.feedback-form__job-list,
+.feedback-form__job-block {
   font: 500 18px/22px 'Montserrat', sans-serif;
   color: #999999;
 }

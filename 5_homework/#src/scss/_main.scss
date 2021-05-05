@@ -122,6 +122,7 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 358px));
 
   &__block {
+    position: relative;
     height: 190px;
     box-sizing: border-box;
     font: 400 18px/21px 'Roboto Condensed', sans-serif;
@@ -142,6 +143,70 @@
 
 .main__list-advantages {
   margin: 60px auto 154px;
+}
+//
+.block-faq{
+  &__row-block {
+    margin: 173px auto 60px;
+    max-width: 700px;
+  }
+  &__question {
+
+  }
+  &__list {
+    max-width: 750px;
+    margin: 0 auto;
+    list-style-type: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__title {
+    user-select: none;
+    font: 500 26px/31px 'Montserrat', sans-serif;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      transition: transform 0.8s ease;
+      transform: rotate(0deg);
+      position: absolute;
+      content: url("../img/faq_cross.png");
+      left: 700px;
+    }
+  }
+
+  &__description {
+    margin: 17px 0 10px;
+    position:relative;
+    font: 400 18px/21px 'Roboto Condensed', sans-serif;
+    width: 600px;
+    bottom: 40px;
+    opacity: 0;
+    z-index: -1;
+    transition: all 1s ease;
+
+  }
+  &__line {
+    position: relative;
+    transition: bottom 1s ease;
+    bottom: 70px;
+
+  }
+
+  &__custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+
+.main__block-faq {
+  max-width: 900px;
+  margin: 0 auto;
 }
 //
 .feedback-block {

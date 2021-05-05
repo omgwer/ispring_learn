@@ -82,6 +82,22 @@
   transition: all 1s ease;
 }
 
+.list-advantages__block {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.list-advantages__block:nth-child(5),
+.list-advantages__block:nth-child(6),
+.list-advantages__block:nth-child(7) {
+  bottom: 100px;
+  -webkit-transition: bottom 0.5s ease, opacity 0.5s ease;
+  -o-transition: bottom 0.5s ease, opacity 0.5s ease;
+  transition: bottom 0.5s ease, opacity 0.5s ease;
+}
+
 .container .loaded .content__image:first-child,
 .container .loaded .content__text:first-child {
   opacity: 1;
@@ -114,6 +130,32 @@
 .loaded .tags-list__box:nth-child(4) {
   opacity: 1;
   right: 0;
+}
+
+.loaded > .list-advantages__block {
+  opacity: 1;
+}
+
+.loaded > .list-advantages__block:nth-child(5),
+.loaded > .list-advantages__block:nth-child(6),
+.loaded > .list-advantages__block:nth-child(7) {
+  bottom: 0;
+}
+
+.block-faq__custom-checkbox:checked + label::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.block-faq__custom-checkbox:checked ~ .block-faq__line {
+  bottom: 0;
+}
+
+.block-faq__custom-checkbox:checked ~ .block-faq__description {
+  opacity: 1;
+  bottom: 0;
+  z-index: 1;
 }
 
 .header {
@@ -313,6 +355,7 @@
 }
 
 .list-advantages__block {
+  position: relative;
   height: 190px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -335,6 +378,77 @@
 
 .main__list-advantages {
   margin: 60px auto 154px;
+}
+
+.block-faq__row-block {
+  margin: 173px auto 60px;
+  max-width: 700px;
+}
+
+.block-faq__list {
+  max-width: 750px;
+  margin: 0 auto;
+  list-style-type: none;
+}
+
+.block-faq__list:hover {
+  cursor: pointer;
+}
+
+.block-faq__title {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font: 500 26px/31px 'Montserrat', sans-serif;
+  position: relative;
+  cursor: pointer;
+}
+
+.block-faq__title::after {
+  -webkit-transition: -webkit-transform 0.8s ease;
+  transition: -webkit-transform 0.8s ease;
+  -o-transition: transform 0.8s ease;
+  transition: transform 0.8s ease;
+  transition: transform 0.8s ease, -webkit-transform 0.8s ease;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  position: absolute;
+  content: url("../img/faq_cross.png");
+  left: 700px;
+}
+
+.block-faq__description {
+  margin: 17px 0 10px;
+  position: relative;
+  font: 400 18px/21px 'Roboto Condensed', sans-serif;
+  width: 600px;
+  bottom: 40px;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.block-faq__line {
+  position: relative;
+  -webkit-transition: bottom 1s ease;
+  -o-transition: bottom 1s ease;
+  transition: bottom 1s ease;
+  bottom: 70px;
+}
+
+.block-faq__custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.main__block-faq {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .feedback-block {

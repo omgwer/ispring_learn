@@ -155,7 +155,7 @@
 .block-faq__custom-checkbox:checked ~ .block-faq__description {
   opacity: 1;
   bottom: 0;
-  z-index: 1;
+  font: 400 18px/21px 'Roboto Condensed', sans-serif;
 }
 
 .header {
@@ -386,9 +386,14 @@
 }
 
 .block-faq__list {
-  max-width: 750px;
-  margin: 0 auto;
+  position: relative;
+  border-bottom: 1px solid #000000;
+  max-width: 720px;
+  margin: 0 auto 25px;
   list-style-type: none;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .block-faq__list:hover {
@@ -420,16 +425,15 @@
 }
 
 .block-faq__description {
-  margin: 17px 0 10px;
   position: relative;
-  font: 400 18px/21px 'Roboto Condensed', sans-serif;
+  font-size: 0;
+  margin: 17px 0 10px;
   width: 600px;
-  bottom: 40px;
   opacity: 0;
-  z-index: -1;
-  -webkit-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
+  bottom: 50px;
+  -webkit-transition: opacity 0.8s ease-in, bottom 0.4s ease;
+  -o-transition: opacity 0.8s ease-in, bottom 0.4s ease;
+  transition: opacity 0.8s ease-in, bottom 0.4s ease;
 }
 
 .block-faq__line {

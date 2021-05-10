@@ -11,6 +11,7 @@ function setBodyLoaded() {
 function setAnimatedBlockLoaded() {
   const animatedBlockSecond = document.getElementById('animatedBlockSecond');
   const animatedBlock = document.getElementById('animatedBlock');
+
   console.log(animatedBlock);
   if (!animatedBlock) {
     return;
@@ -24,6 +25,7 @@ function setAnimatedBlockLoaded() {
     if (window.pageYOffset + window.innerHeight > animatedBlock.offsetTop + ANIMATED_BLOCK_OFFSET) {
       if (!reached) {
         animatedBlock.classList.add('loaded');
+
         reached = true;
       }
     }

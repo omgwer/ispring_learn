@@ -71,9 +71,11 @@
 //
 .content {
   max-width: 1136px;
+
   &__image {
     position:relative;
   }
+
   &__block {
     position:relative;
     display: flex;
@@ -146,10 +148,12 @@
 }
 //
 .block-faq{
+
   &__row-block {
     margin: 173px auto 60px;
     max-width: 700px;
   }
+
   &__list {
     position: relative;
     border-bottom: 1px solid #000000;
@@ -157,6 +161,7 @@
     margin: 0 auto 25px;
     list-style-type: none;
     transition: all 1s ease;
+
     &:hover {
       cursor: pointer;
     }
@@ -202,7 +207,6 @@
   }
 }
 
-
 .main__block-faq {
   max-width: 900px;
   margin: 0 auto;
@@ -214,6 +218,7 @@
   height: 694px;
   padding-top: 125px;
   box-sizing: border-box;
+
   &__title {
     width: 470px;
     color: #ffffff;
@@ -247,10 +252,12 @@
     height: 64px;
     box-sizing: border-box;
     border-radius: 4px;
+
     &:hover {
       cursor: pointer;
     }
   }
+
   &__name,
   &__email,
   &__job-block {
@@ -289,6 +296,7 @@
 }
 
 .checkbox-block {
+
   &__title{
     color: #ffffff;
     font: 400 16px/22px 'Roboto Condensed', sans-serif;

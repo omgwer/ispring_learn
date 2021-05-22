@@ -9,10 +9,8 @@ function setBodyLoaded() {
 }
 
 function setAnimatedBlockLoaded() {
-  const animatedBlockSecond = document.getElementById('animatedBlockSecond');
+  const animatedBlockAdventages = document.getElementById('animatedBlockAdventages');
   const animatedBlock = document.getElementById('animatedBlock');
-
-  console.log(animatedBlock);
   if (!animatedBlock) {
     return;
   }
@@ -25,16 +23,14 @@ function setAnimatedBlockLoaded() {
     if (window.pageYOffset + window.innerHeight > animatedBlock.offsetTop + ANIMATED_BLOCK_OFFSET) {
       if (!reached) {
         animatedBlock.classList.add('loaded');
-
         reached = true;
       }
     }
-    if (window.pageYOffset + window.innerHeight > animatedBlockSecond.offsetTop + ANIMATED_BLOCK_SECOND) {
+    if (window.pageYOffset + window.innerHeight > animatedBlockAdventages.offsetTop + ANIMATED_BLOCK_SECOND) {
       if (!reachedSecond) {
-        animatedBlockSecond.classList.add('loaded');
+        animatedBlockAdventages.classList.add('loaded');
         reachedSecond = true;
       }
     }
   })
-
 }

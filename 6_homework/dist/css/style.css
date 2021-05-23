@@ -98,27 +98,25 @@
   transition: bottom 0.5s ease, opacity 0.5s ease;
 }
 
-.container .loaded .content__image:first-child,
-.container .loaded .content__text:first-child,
-.container .loaded .content__image:nth-child(2),
-.container .loaded .content__text:nth-child(2) {
-  opacity: 1;
-  right: 0;
-}
-
 .loaded .animation {
   right: 0;
   bottom: 0;
   opacity: 1;
 }
 
-.loaded > .list-advantages__block {
+.scrolled .content__image,
+.scrolled .content__text {
+  opacity: 1;
+  right: 0;
+}
+
+.scrolled > .list-advantages__block {
   opacity: 1;
 }
 
-.loaded > .list-advantages__block:nth-child(5),
-.loaded > .list-advantages__block:nth-child(6),
-.loaded > .list-advantages__block:nth-child(7) {
+.scrolled > .list-advantages__block:nth-child(5),
+.scrolled > .list-advantages__block:nth-child(6),
+.scrolled > .list-advantages__block:nth-child(7) {
   bottom: 0;
 }
 

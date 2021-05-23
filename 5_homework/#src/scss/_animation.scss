@@ -74,22 +74,20 @@
   }
 }
 
-.container .loaded {
-
-  .content__image:first-child,
-  .content__text:first-child,
-  .content__image:nth-child(2),
-  .content__text:nth-child(2){
-    opacity: 1;
-    right: 0;
-  }
-}
-
 .loaded {
   .animation {
     right: 0;
     bottom: 0;
     opacity: 1;
+  }
+}
+
+.scrolled {
+
+  .content__image,
+  .content__text {
+    opacity: 1;
+    right: 0;
   }
 
   > .list-advantages__block {

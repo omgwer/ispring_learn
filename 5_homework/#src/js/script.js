@@ -22,13 +22,13 @@ function setAnimatedBlockLoaded() {
   window.addEventListener('scroll', () => {
     if (window.pageYOffset + window.innerHeight > animatedBlock.offsetTop + ANIMATED_BLOCK_OFFSET) {
       if (!reached) {
-        animatedBlock.classList.add('loaded');
+        animatedBlock.classList.add('scrolled');
         reached = true;
       }
     }
     if (window.pageYOffset + window.innerHeight > animatedBlockAdventages.offsetTop + ANIMATED_BLOCK_SECOND) {
       if (!reachedSecond) {
-        animatedBlockAdventages.classList.add('loaded');
+        animatedBlockAdventages.classList.add('scrolled');
         reachedSecond = true;
       }
     }

@@ -1,13 +1,15 @@
 .title-course {
+  flex-wrap: nowrap;
   display: flex;
   justify-content: space-between;
   margin: 43px auto 0;
   max-width: 1580px;
 
+
   &__block {
     position: relative;
     width: 745px;
-    margin: 180px 0 0 5px;
+    margin: 180px 0 0 15px;
   }
 
   &__header {
@@ -50,7 +52,7 @@
 
 .tags-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 337px));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 337px));
   background-color: #000000;
   grid-gap: 85px;
   min-height: 398px;

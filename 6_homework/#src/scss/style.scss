@@ -17,6 +17,10 @@
   margin: -1px;
 }
 
+:root {
+  --primary-width: 700px;
+}
+
 @@include('_animation.scss')
 @@include('_header.scss')
 @@include('_main.scss')

@@ -1,6 +1,7 @@
 window.addEventListener('load', function () {
   setBodyLoaded();
   setAnimatedBlockLoaded();
+  widthDocumentParser();
 });
 
 function setBodyLoaded() {
@@ -35,4 +36,18 @@ function setAnimatedBlockLoaded() {
   })
 }
 
-function dropList () {}
+function widthMeter() {
+  let widthDocument = document.querySelector('body').offsetWidth;
+  if (widthDocument >= 740) {
+    return;
+  }
+  let offsetData = document.querySelector('body');
+  offsetData.style.setProperty('--primary-width', (widthDocument - 35)+ 'px');
+}
+
+function widthDocumentParser () {
+  widthMeter();
+  window.addEventListener('resize', function (evt){
+    widthMeter();
+  })
+}

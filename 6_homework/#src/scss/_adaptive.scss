@@ -86,9 +86,6 @@
     &__text {
       margin: 0 auto;
     }
-
-
-
   }
 
   .content__block {
@@ -98,7 +95,6 @@
       flex-wrap: wrap;
     }
   }
-
 }
 
 @media screen and(max-width: 1150px) {
@@ -142,35 +138,53 @@
   }
 }
 
-
 @media screen and (max-width: 1000px) {
   .header__links {
       display: none;
     }
 
+  .content {
+    &__title {
+      text-align: center;
+    }
+
+  }
+
   .header__button-block {
     display: block;
+  }
+
+  .row-block {
+    margin: 20px auto;
+  }
+
+  .list-advantages {
+    margin: 30px auto 40px;
   }
 }
 
 @media screen and (max-width: 760px) {
   .row-block {
     text-align: center;
+    font: 500 36px/48px Montserrat,sans-serif;
   }
 
-
-
+  .block-faq__question {
+    margin: 0 5px;
+  }
 }
-
-
 
 @media screen and (max-width: 730px) {
   .title-course {
-
     &__image {
       transform: translateY(-50px);
       width: 100%;
       height: auto;
+    }
+
+    &__description {
+      text-align: center;
+      margin: 0 5px;
     }
 
     &__header {
@@ -183,11 +197,18 @@
     }
   }
 
+  .tags-list {
+    padding: 5px;
+  }
+
   .content {
     &__image {
-      margin-left: 10px;
       width: 80%;
       height: 80%;
+    }
+
+    &__description {
+      width: auto;
     }
 
     &__text {
@@ -196,7 +217,36 @@
   }
 }
 
+@media screen and (max-width: 688px) {
+  .list-advantages {
+    grid-gap: 5px;
+
+
+    &__block {
+      display: flex;
+      height: auto;
+      padding: 5px 15px;
+    }
+
+    p {
+      max-width: 250px;
+
+    }
+
+
+  }
+}
+
 @media screen and (max-width: 550px) {
+  .header__button-block {
+    margin-right: 10px;
+  }
+  .content {
+    &__title {
+      font-size: 7vw;
+      margin-bottom: 0;
+    }
+  }
   .title-course {
     &__image {
       transform: translateY(-20px);
@@ -212,8 +262,20 @@
   }
 
   .row-block {
-    font: 500 36px/48px Montserrat,sans-serif;
+    font: 500 32px/44px Montserrat,sans-serif;
+    font-size: 7vw;
   }
+
+  .block-faq {
+    &__title {
+      font-size: 6vw;
+    }
+  }
+
+  .footer__author-course {
+    margin: 20px auto 20px;
+  }
+
 }
 
 @media screen and (max-width: 370px) {
@@ -243,9 +305,5 @@
     &__title {
       font: 500 30px/48px Montserrat,sans-serif;
     }
-  }
-
-  .row-block {
-    font: 500 29px/37px Montserrat,sans-serif;
   }
 }

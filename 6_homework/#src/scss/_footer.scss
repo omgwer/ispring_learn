@@ -1,9 +1,9 @@
 .footer__author-course {
-  margin: 144px auto 120px;
+  margin: 20px auto 120px;
 }
 
 .author-course {
-  width: 734px;
+  max-width: 734px;
 
   &__avatar {
     display: block;
@@ -21,10 +21,12 @@
     font: 400 18px/27px 'Roboto Condensed', sans-serif;
     color: rgba(0, 0, 0, 0.7);
     margin: 9px 0 24px;
+    text-align: center;
+    padding: 0 5px;
   }
 
   &__hobby {
-    width: 626px;
+    max-width: 626px;
     margin: 0 auto;
     text-align: center;
   }

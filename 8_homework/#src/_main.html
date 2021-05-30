@@ -8,7 +8,7 @@
                     <p class="title-course__description">
                         Онлайн-курс для творческих людей, о том, как управлять своим временем
                     </p>
-                    <a href="#" class="title-course__button  button_black">
+                    <a href="#" class="title-course__button  button_black js-button-join">
                         Записаться на курс
                     </a>
                 </div>
@@ -129,33 +129,8 @@
                 <h2 class="feedback-block__title">
                     Единственное, что нужно <span class="font-color_pink">сделать</span>
                 </h2>
-                <form method="get" action="" class="feedback-form feedback-block__feedback-form">
-                    <div class="feedback-form__fieldspace">
-                        <label class="feedback-form__group">
-                                <input class="feedback-form__name" type="text" name="user_name"
-                                   placeholder="Ваше имя" required>
-                        </label>
-                        <label class="feedback-form__group">
-                        <input class="feedback-form__email" type="email" name="user_email"
-                               placeholder="Email" required >
-                        </label>
-                        <label class="feedback-form__group">
-                        <select class="feedback-form__job-block" name="user_job"
-                                size="1" required >
-                            <option value="dev" class="feedback-form__job-list">Деятельность</option>
-                            <option value="dev" class="feedback-form__job-list">Программист</option>
-                            <option value="diz" class="feedback-form__job-list">Дизайнер</option>
-                            <option value="market" class="feedback-form__job-list">Маркетолог</option>
-                        </select>
-                        </label>
-                        <div class="checkbox-block main__checkbox-block">
-                            <input id="button" class="checkbox-block__button custom-checkbox" type="checkbox" name="spam_approve">
-                            <label for="button" class="checkbox-block__title">
-                                Согласен получать информационные материалы о старте курса
-                            </label>
-                        </div>
-                    </div>
-                    <input class="feedback-form__submit" type="submit" value="Записаться на курс">
-                </form>
+                <a class="button_white js-button-join">
+                    Записаться на курс
+                </a>
             </section>
         </div>

@@ -15,18 +15,6 @@
   }
 }
 
-@media screen and (max-width: 1460px) {
-    .feedback-form {
-      &__fieldspace {
-        margin: 0 auto;
-      }
-
-      &__submit {
-        margin: 10px auto;
-      }
-    }
-}
-
 @media screen and (max-width: 1300px) {
   .title-course {
     &__header {
@@ -112,29 +100,6 @@
 @media screen and(max-width: 1150px) {
   .list-advantages {
     justify-content: center;
-  }
-}
-
-@media screen and (max-width: 1115px) {
-  .feedback-block {
-    padding: 30px 0 5px;
-    height: auto;
-
-    &__title {
-      margin: 0 auto;
-    }
-  }
-
-  .feedback-form {
-    max-width: 500px;
-    margin: 30px auto;
-
-    &__group {
-
-      display: block;
-      max-width: 340px;
-      margin: 5px auto;
-    }
   }
 }
 
@@ -272,6 +237,45 @@
   }
 }
 
+@media screen and (max-width: 640px) {
+  .overlay {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+
+  .popup_closed{
+    right: 25px;
+    top: 25px;
+
+    img {
+      transform: scale(3);
+    }
+  }
+  .popup {
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+    border-radius: 0;
+  }
+
+  .feedback-form {
+    &__name,
+    &__email,
+    &__job-block,
+    &__submit {
+      max-width: 480px;
+      width: 100%;
+    }
+
+    &__fieldspace {
+      width: 100%;
+    }
+  }
+}
+
 @media screen and (max-width: 550px) {
   .header__button-block {
     margin-right: 10px;
@@ -325,6 +329,15 @@
   }
 }
 
+@media screen and (max-width: 420px) {
+  .button_white {
+    padding: 15px 5px;
+    margin: 0 auto;
+    display: block;
+    width: 95%;
+  }
+}
+
 @media screen and (max-width: 370px) {
   .title-course {
     width: 320px;
@@ -357,18 +370,6 @@
   .feedback-block {
     &__title {
       font: 500 28px/40px 'Montserrat',sanf-serif;
-    }
-  }
-
-  .feedback-form {
-    &__group {
-      margin: 5px 0;
-    }
-
-    &__name,
-    &__email,
-    &__job-block{
-      width: 100%;
     }
   }
 }

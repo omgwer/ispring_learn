@@ -2,7 +2,11 @@ window.addEventListener('load', function () {
   setBodyLoaded();
   setAnimatedBlockLoaded();
   widthDocumentParser();
-  checkedControl();
+  checkedDropList();
+  setScrollToStartPage();
+  setMenuScrollNavigation();
+  closedPopup();
+  openPopup();
 });
 
 function setBodyLoaded() {
@@ -53,7 +57,7 @@ function widthDocumentParser () {
   })
 }
 
-function checkedControl() {
+function checkedDropList() {
   let checkboxFirstList = document.getElementById('checkboxFirst');
   let checkboxSecondList = document.getElementById('checkboxSecond');
   let checkboxThirdList = document.getElementById('checkboxThird');
@@ -78,6 +82,72 @@ function checkedControl() {
   });
 }
 
+function setScrollToStartPage() {
+  const button = document.getElementById('scrollToStart');
+  window.addEventListener('scroll', function (evt){
+    let offsetYPosition = window.pageYOffset.toFixed();
+    const offsetYToButtonVisible = 750;
+    if (offsetYPosition >= offsetYToButtonVisible ) {
+      button.classList.remove('visually-hidden');
+    } else {
+      button.classList.add('visually-hidden');
+    }
+  })
+
+   button.addEventListener('click', function (evt){
+     evt.preventDefault();
+     window.scroll({
+       left: 0,
+       top: 0,
+       behavior: 'smooth',
+     })
+   })
+}
+
+function setMenuScrollNavigation() {
+  const smoothLinks = document.querySelectorAll('.js-menu-item');
+  smoothLinks.forEach(smoothLink => {
+    smoothLink.addEventListener('click', evt => {
+      evt.preventDefault();
+      const id = smoothLink.getAttribute('href');
+      console.log(id);
+      document.querySelector(id).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+    });
+  });
+}
+
+function closedPopup() {
+  const closedButton = document.querySelector('.popup_closed');
+  const popupForm = document.querySelector('.popup');
+  const overlay = document.querySelector('.overlay');
+
+  closedButton.addEventListener('click', function (evt){
+    evt.preventDefault();
+    popupForm.classList.add('visually-hidden');
+    overlay.classList.add('visually-hidden');
+  })
+  overlay.addEventListener('click', function (evt){
+    evt.preventDefault();
+    popupForm.classList.add('visually-hidden');
+    overlay.classList.add('visually-hidden');
+  })
+}
+
+function openPopup() {
+  const popupButtons = document.querySelectorAll('.js-button-join');
+  const popupForm = document.querySelector('.popup');
+  const overlay = document.querySelector('.overlay');
+  popupButtons.forEach(popupButton => {
+    popupButton.addEventListener('click', evt => {
+      evt.preventDefault();
+      popupForm.classList.remove('visually-hidden');
+      overlay.classList.remove('visually-hidden');
+    })
+  })
+}
 
 
 

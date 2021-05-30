@@ -13,15 +13,12 @@
 
   &__button-block {
     display: none;
-
     margin-right: 35px;
-
   }
 
   &__button-image {
     align-items: center;
     padding-top: 2px;
-
   }
 
   &__links {
@@ -38,6 +35,10 @@
   color: #000000;
   vertical-align: middle;
   font: 500 16px/20px 'Montserrat', sans-serif;
+
+  &:hover {
+    border-bottom: 1px solid #383838;
+  }
 }
 
 .button_black {

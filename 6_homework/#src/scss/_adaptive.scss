@@ -15,6 +15,18 @@
   }
 }
 
+@media screen and (max-width: 1460px) {
+    .feedback-form {
+      &__fieldspace {
+        margin: 0 auto;
+      }
+
+      &__submit {
+        margin: 10px auto;
+      }
+    }
+}
+
 @media screen and (max-width: 1300px) {
   .title-course {
     &__header {
@@ -103,6 +115,29 @@
   }
 }
 
+@media screen and (max-width: 1115px) {
+  .feedback-block {
+    padding: 30px 0 5px;
+    height: auto;
+
+    &__title {
+      margin: 0 auto;
+    }
+  }
+
+  .feedback-form {
+    max-width: 500px;
+    margin: 30px auto;
+
+    &__group {
+
+      display: block;
+      max-width: 340px;
+      margin: 5px auto;
+    }
+  }
+}
+
 @media screen and (max-width: 1100px) {
   .tags-list {
     grid-gap: 0;
@@ -147,7 +182,6 @@
     &__title {
       text-align: center;
     }
-
   }
 
   .header__button-block {
@@ -218,22 +252,23 @@
 }
 
 @media screen and (max-width: 688px) {
+  .content {
+    margin: 20px auto 0;
+  }
+
   .list-advantages {
     grid-gap: 5px;
-
 
     &__block {
       display: flex;
       height: auto;
-      padding: 5px 15px;
+      padding: 15px 15px 0;
+      gap: 10px;
     }
 
     p {
       max-width: 250px;
-
     }
-
-
   }
 }
 
@@ -276,6 +311,18 @@
     margin: 20px auto 20px;
   }
 
+  .feedback-block {
+    &__title {
+      width: auto;
+      max-width: 470px;
+      font: 500 34px/46px 'Montserrat',sanf-serif;
+      text-align: center;
+    }
+  }
+
+  .checkbox-block__title {
+    max-width: 350px;
+  }
 }
 
 @media screen and (max-width: 370px) {
@@ -304,6 +351,24 @@
   .content {
     &__title {
       font: 500 30px/48px Montserrat,sans-serif;
+    }
+  }
+
+  .feedback-block {
+    &__title {
+      font: 500 28px/40px 'Montserrat',sanf-serif;
+    }
+  }
+
+  .feedback-form {
+    &__group {
+      margin: 5px 0;
+    }
+
+    &__name,
+    &__email,
+    &__job-block{
+      width: 100%;
     }
   }
 }

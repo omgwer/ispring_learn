@@ -5,7 +5,6 @@
   margin: 43px auto 0;
   max-width: 1580px;
 
-
   &__block {
     position: relative;
     width: 745px;
@@ -236,9 +235,10 @@
 }
 
 .feedback-form {
+  padding: 5px;
   display: flex;
   flex-wrap: wrap;
-  width: 1430px;
+  max-width: 1440px;
   box-sizing: border-box;
   justify-content: space-between;
 

@@ -30,6 +30,7 @@ body {
 }
 
 .main_text {
+    display: flex;
     margin: 100px auto auto 150px;
 }
 
@@ -70,6 +71,10 @@ body {
     background-color: #c4d2f6;
 }
 
+.left-container {
+    margin-right: 150px;
+}
+
 @media only screen and (max-width: 992px) {
     .main_text {
         margin-left: 0;
@@ -81,7 +86,7 @@ body {
         margin-right: auto;
     }
 
-
-
-
+    .main_text {
+        display: block;
+    }
 }

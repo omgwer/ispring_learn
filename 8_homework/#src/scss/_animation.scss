@@ -98,3 +98,24 @@
     font: 400 18px/21px 'Roboto Condensed', sans-serif;
   }
 }
+
+.burger-close {
+  .header {
+    &__burger-first {
+      position: relative;
+      top:20px;
+      transform: rotate(45deg);
+
+    }
+
+    &__burger-second {
+      display: none;
+    }
+
+    &__burger-third {
+      position: relative;
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}

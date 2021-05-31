@@ -12,8 +12,16 @@
   }
 
   &__button-block {
+    position: relative;
     display: none;
+    width: 80px;
+    box-sizing: border-box;
     margin-right: 35px;
+    z-index: 1;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__button-image {
@@ -22,11 +30,26 @@
   }
 
   &__links {
+    position: relative;
+    z-index: 1;
     margin-right: 25px;
     display: flex;
     justify-content: space-between;
     width: 815px;
     align-items: center;
+  }
+
+  &__burger-first{
+    transition-delay: 0s, 0.3s;
+  }
+
+  &__burger-third {
+    transition-delay: 0s, 0.3s;
+  }
+
+  &__burger-second {
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
   }
 }
 

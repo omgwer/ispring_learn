@@ -7,6 +7,7 @@ window.addEventListener('load', function () {
   setMenuScrollNavigation();
   closedPopup();
   openPopup();
+  setMobileMenu();
 });
 
 function setBodyLoaded() {
@@ -110,7 +111,7 @@ function setMenuScrollNavigation() {
     smoothLink.addEventListener('click', evt => {
       evt.preventDefault();
       const id = smoothLink.getAttribute('href');
-      console.log(id);
+      setInteractiveParameters();
       document.querySelector(id).scrollIntoView({
         behavior: 'smooth',
         block: 'start',
@@ -149,6 +150,23 @@ function openPopup() {
   })
 }
 
+function setMobileMenu() {
+  const burgerButton = document.querySelector('.burger-open');
+  const navigationMenu = document.querySelector('.header__links');
+  burgerButton.addEventListener('click', evt => {
+    navigationMenu.classList.toggle('js-mobile-menu');
+    navigationMenu.classList.toggle('adaptive_hide');
+    burgerButton.classList.toggle('burger-close');
+  });
+}
 
-
-
+function setInteractiveParameters() {
+  const burgerButton = document.querySelector('.burger-open');
+  const navigationMenu = document.querySelector('.header__links');
+  const triggerForClose = navigationMenu.classList.contains('adaptive_hide');
+  if (!triggerForClose) {
+    navigationMenu.classList.toggle('js-mobile-menu');
+    navigationMenu.classList.toggle('adaptive_hide');
+    burgerButton.classList.toggle('burger-close');
+  }
+}

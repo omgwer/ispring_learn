@@ -139,7 +139,7 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .header__links {
+  .adaptive_hide {
       display: none;
     }
 
@@ -150,7 +150,10 @@
   }
 
   .header__button-block {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 60px;
   }
 
   .row-block {

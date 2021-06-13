@@ -171,18 +171,21 @@ function setInteractiveParameters() {
   }
 }
 
-function validationForm() {
-  const invalidName = document.getElementById('user_name');
-  const invalidEmail = document.getElementById('user_email');
-  invalidName.addEventListener('change', evt=>{
-    evt.oninvalid = function (evt) {
-      evt.target.setCustomValidity('Имя состоит из слов, разделенных пробелом. Без символов и цифр!');
-    }
-  })
-
-  invalidEmail.oninvalid = function (evt) {
-    evt.target.setCustomValidity('Email состоит из латинских букв. Формат email xxx@xx.xxx');
-  }
+ function validationForm() {
+//   let invalidName = document.getElementById('user_name');
+//   let invalidEmail = document.getElementById('user_email');
+//
+//   invalidName.oninvalid = function (evt) {
+//       console.log('first-11');
+//       evt.target.setCustomValidity('Имя состоит из слова или слов, разделенных пробелом. Без символов и цифр!');
+//     }
+//
+//
+//   invalidEmail.addEventListener('change', evt=> {
+//     evt.oninvalid = function (evt) {
+//       evt.target.setCustomValidity('Email состоит из латинских букв. Формат email xxx@xx.xxx');
+//     }
+//   })
 }
 
 function customDropList() {

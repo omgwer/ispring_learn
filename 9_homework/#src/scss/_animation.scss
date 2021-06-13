@@ -1,0 +1,121 @@
+.animation {
+  opacity: 0;
+}
+
+.header {
+  transition: bottom 1.2s ease,
+              opacity 1.2s ease;
+  bottom: 30px;
+}
+//
+.title-course__block {
+  transition: right 1.2s ease,
+              opacity 1.2s ease-in;
+  right: 400px;
+}
+
+.title-course__image {
+  transition: opacity 1.2s ease-in,
+              right 1.2s ease;
+  right: -400px;
+}
+//
+.tags-list__box {
+
+  &:nth-child(2){
+    transition: opacity 1s ease;
+  }
+
+  &:nth-child(3){
+    right: 425px;
+    transition: opacity 0.8s ease,
+                right 0.8s ease;
+
+  }
+
+  &:nth-child(4){
+    right: 425px;
+    transition: opacity 1s ease 0.5s,
+                right 1s ease 0.5s;
+  }
+}
+//
+.content {
+
+  &__image,
+  &__text {
+    opacity: 0;
+    transition: all 1s ease;
+  }
+}
+//
+.list-advantages__block {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+
+  &:nth-child(5),
+  &:nth-child(6),
+  &:nth-child(7) {
+    bottom: 100px;
+    transition: bottom 0.5s ease,
+                opacity 0.5s ease;
+  }
+}
+
+.loaded {
+  .animation {
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+.scrolled {
+  .content__image,
+  .content__text {
+    opacity: 1;    
+  }
+
+  > .list-advantages__block {
+    opacity: 1;
+
+    &:nth-child(5),
+    &:nth-child(6),
+    &:nth-child(7) {
+      bottom: 0;
+    }
+  }
+}
+//
+.block-faq__custom-checkbox:checked {
+  + label::after {
+    transform: rotate(-45deg);
+  }
+
+  ~ .block-faq__description {
+    opacity: 1;
+    bottom: 0;
+    font: 400 18px/21px 'Roboto Condensed', sans-serif;
+  }
+}
+
+.burger-close {
+  .header {
+    &__burger-first {
+      position: relative;
+      top:20px;
+      transform: rotate(45deg);
+
+    }
+
+    &__burger-second {
+      display: none;
+    }
+
+    &__burger-third {
+      position: relative;
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}

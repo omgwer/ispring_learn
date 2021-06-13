@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: #ffffff;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+:root {
+  --primary-width: 700px;
+}
+
+@@include('_animation.scss')
+@@include('_header.scss')
+@@include('_main.scss')
+@@include('_footer.scss')
+@@include('_interactive.scss')
+@@include('_adaptive.scss')
+
+

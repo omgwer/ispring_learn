@@ -8,6 +8,8 @@ window.addEventListener('load', function () {
   closedPopup();
   openPopup();
   setMobileMenu();
+  validationForm();
+  customDropList();
 });
 
 function setBodyLoaded() {
@@ -167,4 +169,31 @@ function setInteractiveParameters() {
     navigationMenu.classList.toggle('adaptive_hide');
     burgerButton.classList.toggle('burger-close');
   }
+}
+
+function validationForm() {
+  const inputForm = document.getElementById('validate');
+  const submitButton = inputForm.querySelector('.feedback-form__submit');
+  console.log(submitButton);
+  submitButton.addEventListener('submit', evt => {
+    evt.preventDefault();
+    console.log('kek');
+  })
+}
+
+function customDropList() {
+  const selected = document.querySelector(".selected");
+  const optionsContainer = document.querySelector(".options-container");
+  const optionsList = document.querySelectorAll(".option");
+
+  selected.addEventListener("click", () => {
+    optionsContainer.classList.toggle("active");
+  });
+
+  optionsList.forEach(option => {
+    option.addEventListener("click", () => {
+      selected.innerHTML = option.querySelector("label").innerHTML;
+      optionsContainer.classList.remove("active");
+    });
+  });
 }

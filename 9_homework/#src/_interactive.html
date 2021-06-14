@@ -21,7 +21,7 @@
                                    placeholder="Ваше имя"
                                    required
                                    title="Введите свое имя без цифр и символов"
-                                   pattern="^[A-Za-zА-Яа-яЁё]+$"
+                                   pattern="^[A-Za-zА-Яа-яЁё\s]+$"
                                    autocomplete="off">
                         </label>
                         <label class="feedback-form__group">
@@ -43,19 +43,28 @@
                                                id="grade-a"
                                                name="category"
                                                value="prog"
-                                               required="required"/>
+                                               required="required"
+                                               />
                                         <label for="grade-a">
                                             <h3>Программист</h3>
                                         </label>
                                     </div>
                                     <div class="option">
-                                        <input type="radio" class="radio" id="grade-b" name="category" value="diz" />
+                                        <input type="radio"
+                                               class="radio"
+                                               id="grade-b"
+                                               name="category"
+                                               value="diz" />
                                         <label for="grade-b">
                                             <h3>Дизайнер</h3>
                                         </label>
                                     </div>
                                     <div class="option">
-                                        <input type="radio" class="radio" id="grade-c" name="category" value="mark" />
+                                        <input type="radio"
+                                               class="radio"
+                                               id="grade-c"
+                                               name="category"
+                                               value="mark" />
                                         <label for="grade-c">
                                             <h3>Маркетолог</h3>
                                         </label>

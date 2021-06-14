@@ -91,6 +91,15 @@
   }
 
   &__name,
+  &__email {
+    &:hover {
+      cursor: text;
+    }
+  }
+
+
+
+  &__name,
   &__email,
   &__job-block {
     border: 1.35px solid #c0c0c0;
@@ -128,6 +137,10 @@
   &__email:valid {
     box-shadow: 0 0 10px 1px #ee75c1;
   }
+}
+
+.valid {
+  box-shadow: 0 0 10px 1px #ee75c1;
 }
 
 .feedback-form__container:checked {
@@ -264,6 +277,10 @@
   width: 480px;
   flex-direction: column;
   position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .select-box .options-container {

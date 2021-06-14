@@ -689,6 +689,11 @@ input:-webkit-autofill:active {
   cursor: pointer;
 }
 
+.feedback-form__name:hover,
+.feedback-form__email:hover {
+  cursor: text;
+}
+
 .feedback-form__name,
 .feedback-form__email,
 .feedback-form__job-block {
@@ -745,6 +750,11 @@ input:-webkit-autofill:active {
 
 .feedback-form__name:valid,
 .feedback-form__email:valid {
+  -webkit-box-shadow: 0 0 10px 1px #ee75c1;
+          box-shadow: 0 0 10px 1px #ee75c1;
+}
+
+.valid {
   -webkit-box-shadow: 0 0 10px 1px #ee75c1;
           box-shadow: 0 0 10px 1px #ee75c1;
 }
@@ -913,6 +923,10 @@ input:-webkit-autofill:active {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+}
+
+.select-box:hover {
+  cursor: pointer;
 }
 
 .select-box .options-container {

@@ -172,21 +172,20 @@ function setInteractiveParameters() {
 }
 
  function validationForm() {
-//   let invalidName = document.getElementById('user_name');
-//   let invalidEmail = document.getElementById('user_email');
-//
-//   invalidName.oninvalid = function (evt) {
-//       console.log('first-11');
-//       evt.target.setCustomValidity('Имя состоит из слова или слов, разделенных пробелом. Без символов и цифр!');
-//     }
-//
-//
-//   invalidEmail.addEventListener('change', evt=> {
-//     evt.oninvalid = function (evt) {
-//       evt.target.setCustomValidity('Email состоит из латинских букв. Формат email xxx@xx.xxx');
-//     }
-//   })
-}
+  const gradeA = document.getElementById('grade-a');
+  const gradeB = document.getElementById('grade-b');
+  const gradeC = document.getElementById('grade-c');
+  const feedbackProffession = document.querySelector('.feedback-form__container');
+  gradeA.addEventListener('click', evt =>{
+    feedbackProffession.classList.add('valid');
+  });
+   gradeB.addEventListener('click', evt =>{
+     feedbackProffession.classList.add('valid');
+   });
+   gradeC.addEventListener('click', evt =>{
+     feedbackProffession.classList.add('valid');
+   });
+  }
 
 function customDropList() {
   const selected = document.querySelector(".selected");

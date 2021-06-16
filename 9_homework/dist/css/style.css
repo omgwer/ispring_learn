@@ -1468,12 +1468,8 @@ input:-webkit-autofill:active {
 }
 
 @media screen and (max-width: 370px) {
-  .title-course {
-    width: 320px;
-  }
-
   .title-course__header {
-    font: 600 40px/60px 'Montserrat', sans-serif;
+    font: 600 34px/40px 'Montserrat', sans-serif;
   }
 
   .title-course__button {

@@ -178,7 +178,6 @@ input:-webkit-autofill:active {
   width: 80px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-right: 35px;
   z-index: 1;
 }
 
@@ -423,6 +422,10 @@ input:-webkit-autofill:active {
 
 .main__list-advantages {
   margin: 60px auto 154px;
+}
+
+.block-faq {
+  padding-bottom: 25px;
 }
 
 .block-faq__row-block {
@@ -1042,9 +1045,15 @@ input:-webkit-autofill:active {
     font-size: 22px;
     max-width: 500px;
   }
+}
 
-  .title-course__image {
-    width: 700px;
+@media screen and (max-width: 1460px) {
+  .feedback-form__fieldspace {
+    margin: 0 auto;
+  }
+
+  .feedback-form__submit {
+    margin: 10px auto;
   }
 }
 
@@ -1066,17 +1075,13 @@ input:-webkit-autofill:active {
 
 @media screen and (max-width: 1200px) {
   .title-course {
-    -ms-flex-wrap: wrap-reverse;
-        flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin: 0 auto;
   }
 
   .title-course__block {
-    margin: 0 auto;
-    position: relative;
-    -webkit-transform: translateY(-150px);
-        -ms-transform: translateY(-150px);
-            transform: translateY(-150px);
+    margin: 60px auto 0;
   }
 
   .title-course__header {
@@ -1087,24 +1092,16 @@ input:-webkit-autofill:active {
   .title-course__description {
     font-size: 26px;
     max-width: 545px;
-    margin: 15px auto;
+    margin: 15px auto 35px;
   }
 
   .title-course__image {
     margin: 0 auto;
-    position: relative;
     width: 849px;
     height: 732px;
-    -webkit-transform: translateY(-40px);
-        -ms-transform: translateY(-40px);
-            transform: translateY(-40px);
   }
 
   .title-course__button {
-    position: relative;
-    -webkit-transform: translateY(30px);
-        -ms-transform: translateY(30px);
-            transform: translateY(30px);
     margin: 0 auto;
     display: block;
     width: 170px;
@@ -1133,6 +1130,14 @@ input:-webkit-autofill:active {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+
+  .feedback-form__submit {
+    margin-top: 25px;
+  }
+
+  .feedback-form__group {
+    margin: 15px auto;
+  }
 }
 
 @media screen and (max-width: 1150px) {
@@ -1140,6 +1145,26 @@ input:-webkit-autofill:active {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1115px) {
+  .feedback-block {
+    padding: 30px 0 45px;
+    height: auto;
+  }
+
+  .feedback-block__title {
+    margin: 0 auto 35px;
+  }
+
+  .feedback-form {
+    max-width: 500px;
+    margin: 30px auto;
+  }
+
+  .feedback-form__group {
+    display: block;
   }
 }
 
@@ -1160,12 +1185,12 @@ input:-webkit-autofill:active {
 @media screen and (max-width: 1030px) {
   .tags-list {
     display: block;
-    padding-top: 15px;
+    padding: 15px 0;
     min-height: 250px;
   }
 
   .tags-list__box {
-    margin: 15px auto;
+    margin: 30px auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1189,6 +1214,21 @@ input:-webkit-autofill:active {
     width: 1px;
     height: 1px;
     margin: -1px;
+  }
+
+  .title-course,
+  .tags-list,
+  .content,
+  .author-course {
+    padding: 0 20px;
+  }
+
+  .header {
+    padding-right: 20px;
+  }
+
+  .tags-list {
+    padding: 15px 20px;
   }
 
   .header__links {
@@ -1247,6 +1287,7 @@ input:-webkit-autofill:active {
 
   .list-advantages {
     margin: 30px auto 40px;
+    padding: 0 5px;
   }
 }
 
@@ -1259,35 +1300,21 @@ input:-webkit-autofill:active {
   .block-faq__question {
     margin: 0 5px;
   }
+
+  .title-course__header {
+    font: 600 70px/90px 'Montserrat', sans-serif;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 730px) {
   .title-course__image {
-    -webkit-transform: translateY(-50px);
-        -ms-transform: translateY(-50px);
-            transform: translateY(-50px);
     width: 100%;
     height: auto;
   }
 
   .title-course__description {
     text-align: center;
-    margin: 0 5px;
-  }
-
-  .title-course__header {
-    font: 600 70px/90px 'Montserrat', sans-serif;
-    text-align: center;
-  }
-
-  .title-course__block {
-    -webkit-transform: translateY(-120px);
-        -ms-transform: translateY(-120px);
-            transform: translateY(-120px);
-  }
-
-  .tags-list {
-    padding: 5px;
   }
 
   .content__image {
@@ -1306,11 +1333,11 @@ input:-webkit-autofill:active {
 
 @media screen and (max-width: 688px) {
   .content {
-    margin: 20px auto 0;
+    margin-top: 20px;
   }
 
   .list-advantages {
-    grid-gap: 5px;
+    grid-gap: 10px;
   }
 
   .list-advantages__block {
@@ -1318,8 +1345,11 @@ input:-webkit-autofill:active {
     display: -ms-flexbox;
     display: flex;
     height: auto;
-    padding: 15px 15px 0;
-    gap: 10px;
+    padding: 15px 15px;
+    gap: 15px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .list-advantages p {
@@ -1382,29 +1412,28 @@ input:-webkit-autofill:active {
     margin-bottom: 0;
   }
 
-  .title-course__image {
-    -webkit-transform: translateY(-20px);
-        -ms-transform: translateY(-20px);
-            transform: translateY(-20px);
+  .title-course__button {
+    width: 150px;
+    padding: 19px 73px;
+    text-align: center;
   }
 
   .title-course__header {
     font: 600 50px/70px 'Montserrat', sans-serif;
   }
 
-  .title-course__block {
-    -webkit-transform: translateY(-80px);
-        -ms-transform: translateY(-80px);
-            transform: translateY(-80px);
-  }
-
   .row-block {
     font: 500 32px/44px Montserrat,sans-serif;
-    font-size: 7vw;
+    font-size: 6vw;
+    padding: 0 5px;
   }
 
   .block-faq__title {
     font-size: 6vw;
+  }
+
+  .block-faq__list {
+    padding: 5px;
   }
 
   .footer__author-course {
@@ -1429,6 +1458,12 @@ input:-webkit-autofill:active {
     margin: 0 auto;
     display: block;
     width: 95%;
+  }
+}
+
+@media screen and (max-width: 406px) {
+  .title-course__header {
+    font-size: 32px;
   }
 }
 
@@ -1461,5 +1496,15 @@ input:-webkit-autofill:active {
 
   .feedback-block__title {
     font: 500 28px/40px 'Montserrat',sanf-serif;
+  }
+
+  .feedback-form__group {
+    margin: 5px 0;
+  }
+
+  .feedback-form__name,
+  .feedback-form__email,
+  .feedback-form__job-block {
+    width: 100%;
   }
 }

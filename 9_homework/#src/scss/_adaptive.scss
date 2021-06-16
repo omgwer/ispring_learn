@@ -8,12 +8,21 @@
       font-size: 22px;
       max-width: 500px;
     }
+  }
+}
 
-    &__image {
-      width: 700px;
+@media screen and (max-width: 1460px) {
+  .feedback-form {
+    &__fieldspace {
+      margin: 0 auto;
+    }
+
+    &__submit {
+      margin: 10px auto;
     }
   }
 }
+
 
 @media screen and (max-width: 1300px) {
   .title-course {
@@ -35,13 +44,11 @@
 
 @media screen and (max-width: 1200px) {
   .title-course {
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     margin: 0 auto;
 
     &__block {
-      margin: 0 auto;
-      position: relative;
-      transform: translateY(-150px);
+      margin: 60px auto 0;
     }
 
     &__header {
@@ -52,20 +59,16 @@
     &__description {
       font-size: 26px;
       max-width: 545px;
-      margin: 15px auto;
+      margin: 15px auto 35px;
     }
 
     &__image {
       margin: 0 auto;
-      position: relative;
       width: 849px;
       height: 732px;
-      transform: translateY(-40px);
     }
 
     &__button {
-      position: relative;
-      transform: translateY(30px);
       margin: 0 auto;
       display: block;
       width: 170px;
@@ -95,11 +98,41 @@
       flex-wrap: wrap;
     }
   }
+
+  .feedback-form {
+    &__submit {
+      margin-top: 25px;
+    }
+
+    &__group {
+      margin: 15px auto;
+    }
+  }
 }
 
 @media screen and(max-width: 1150px) {
   .list-advantages {
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1115px) {
+  .feedback-block {
+    padding: 30px 0 45px;
+    height: auto;
+
+    &__title {
+      margin: 0 auto 35px;
+    }
+  }
+
+  .feedback-form {
+    max-width: 500px;
+    margin: 30px auto;
+
+    &__group {
+      display: block;
+    }
   }
 }
 
@@ -120,11 +153,11 @@
 @media screen and (max-width: 1030px) {
   .tags-list {
     display: block;
-    padding-top: 15px;
+    padding: 15px 0;
     min-height: 250px;
 
     &__box {
-      margin: 15px auto;
+      margin: 30px auto;
       display: flex;
       align-items: center;
       width: auto;
@@ -145,6 +178,21 @@
     width: 1px;
     height: 1px;
     margin: -1px;
+  }
+
+  .title-course,
+  .tags-list,
+  .content,
+  .author-course {
+    padding: 0 20px;
+  }
+
+  .header {
+    padding-right: 20px;
+  }
+
+  .tags-list {
+    padding: 15px 20px;
   }
 
   .header__links {
@@ -192,6 +240,7 @@
 
   .list-advantages {
     margin: 30px auto 40px;
+    padding: 0 5px;
   }
 }
 
@@ -204,33 +253,23 @@
   .block-faq__question {
     margin: 0 5px;
   }
+
+  .title-course__header {
+    font: 600 70px/90px 'Montserrat', sans-serif;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 730px) {
   .title-course {
     &__image {
-      transform: translateY(-50px);
       width: 100%;
       height: auto;
     }
 
     &__description {
       text-align: center;
-      margin: 0 5px;
     }
-
-    &__header {
-      font: 600 70px/90px 'Montserrat', sans-serif;
-      text-align: center;
-    }
-
-    &__block {
-      transform: translateY(-120px);
-    }
-  }
-
-  .tags-list {
-    padding: 5px;
   }
 
   .content {
@@ -251,17 +290,20 @@
 
 @media screen and (max-width: 688px) {
   .content {
-    margin: 20px auto 0;
+    margin-top: 20px;
   }
 
   .list-advantages {
-    grid-gap: 5px;
+    grid-gap: 10px;
+
 
     &__block {
       display: flex;
       height: auto;
-      padding: 15px 15px 0;
-      gap: 10px;
+      padding: 15px 15px;
+      gap: 15px;
+      align-items: center;
+
     }
 
     p {
@@ -318,6 +360,7 @@
   .header__button-block {
     margin-right: 10px;
   }
+
   .content {
     &__title {
       font-size: 7vw;
@@ -325,27 +368,31 @@
     }
   }
   .title-course {
-    &__image {
-      transform: translateY(-20px);
+
+    &__button {
+      width: 150px;
+      padding: 19px 73px;
+      text-align: center;
     }
 
     &__header {
       font: 600 50px/70px 'Montserrat', sans-serif;
     }
-
-    &__block {
-      transform: translateY(-80px);
-    }
   }
 
   .row-block {
     font: 500 32px/44px Montserrat,sans-serif;
-    font-size: 7vw;
+    font-size: 6vw;
+    padding: 0 5px;
   }
 
   .block-faq {
     &__title {
       font-size: 6vw;
+    }
+
+    &__list {
+      padding: 5px;
     }
   }
 
@@ -373,6 +420,15 @@
     margin: 0 auto;
     display: block;
     width: 95%;
+  }
+}
+
+@media screen and (max-width: 406px) {
+  .title-course {
+
+    &__header {
+      font-size: 32px;
+    }
   }
 }
 
@@ -408,6 +464,18 @@
   .feedback-block {
     &__title {
       font: 500 28px/40px 'Montserrat',sanf-serif;
+    }
+  }
+
+  .feedback-form {
+    &__group {
+      margin: 5px 0;
+    }
+
+    &__name,
+    &__email,
+    &__job-block{
+      width: 100%;
     }
   }
 }

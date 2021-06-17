@@ -92,38 +92,48 @@
                 <h2 class="row-block block-faq__row-block">
                     Всё, что вы хотели <span class="font-color_pink">узнать</span>
                 </h2>
-                <ul class="block-faq__question">
-                    <li class="block-faq__list">
-                        <input id="checkboxFirst" class="block-faq__custom-checkbox" checked type="checkbox">
-                        <label for="checkboxFirst" class="block-faq__title">
-                            Как проходит курс?
-                        </label>
-                        <p class="block-faq__description">
-                            Каждую неделю на протяжении 3 месяцев, вам приходит новый урок на
-                            имейл. Проходить уроки, вы можете в комфортном для вас темпе.
-                        </p>
-                    </li>
-                    <li class="block-faq__list">
-                        <input id="checkboxSecond" class="block-faq__custom-checkbox" type="checkbox">
-                        <label for="checkboxSecond" class="block-faq__title">
-                            Можно получить все уроки сразу?
-                        </label>
-                        <p class="block-faq__description">
-                            Издревле сторонились они людей — на их языке Громадин, — а теперь даже и на глаза им не показываются.
-                            Слух у них завидный, глаз острый; они, правда, толстоваты и не любят спешки.
-                        </p>
-                    </li>
-                    <li class="block-faq__list">
-                        <input id="checkboxThird" class="block-faq__custom-checkbox" type="checkbox">
-                        <label for="checkboxThird" class="block-faq__title">
-                            Если занятия не придут?
-                        </label>
-                        <p class="block-faq__description">
-                            Хоббиты — неприметный, но очень древний народец; раньше их было куда больше, чем нынче: они любят
-                            тишину и покой, тучную пашню и цветущие луга, а сейчас в мире стало что-то очень шумно и довольно тесно.
-                        </p>
-                    </li>
-                </ul>
+                <div class="faq__container">
+                        <div id="firstButton" class="faq__accordion">
+                            <button class="faq__button">
+                                <span>Как проходит курс?</span>
+                                <img class="faq__arrow rotate" src="img/faq_cross.png" alt="крестик">
+                            </button>
+                            <div class="faq__accordion_hide active">
+                                <p>
+                                    Каждую неделю на протяжении 3 месяцев, вам приходит новый урок на
+                                    имейл. Проходить уроки, вы можете в комфортном для вас темпе.
+                                </p>
+                            </div>
+                        </div>
+                        <div id="secondButton" class="faq__accordion">
+                            <button class="faq__button">
+                                <span>
+                                    Можно получить все уроки сразу?
+                                </span>
+                                <img class="faq__arrow" src="img/faq_cross.png" alt="крестик">
+                            </button>
+                            <div class="faq__accordion_hide hidden">
+                                <p>
+                                    Издревле сторонились они людей — на их языке Громадин, — а теперь даже и на глаза им не показываются.
+                                    Слух у них завидный, глаз острый; они, правда, толстоваты и не любят спешки.
+                                </p>
+                            </div>
+                        </div>
+                        <div id="thirdButton" class="faq__accordion">
+                            <button class="faq__button">
+                                <span>
+                                    Если занятия не придут?
+                                </span>
+                                <img class="faq__arrow" src="img/faq_cross.png" alt="крестик">
+                            </button>
+                            <div class="faq__accordion_hide hidden">
+                                <p>
+                                    Хоббиты — неприметный, но очень древний народец; раньше их было куда больше, чем нынче: они любят
+                                    тишину и покой, тучную пашню и цветущие луга, а сейчас в мире стало что-то очень шумно и довольно тесно.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
             </section>
             <section class="feedback-block main__feedback-block">
                 <h2 class="feedback-block__title">

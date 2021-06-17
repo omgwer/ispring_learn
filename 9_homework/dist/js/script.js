@@ -1,8 +1,6 @@
 window.addEventListener('load', function () {
   setBodyLoaded();
   setAnimatedBlockLoaded();
-  widthDocumentParser();
-  checkedDropList();
   setScrollToStartPage();
   setMenuScrollNavigation();
   closedPopup();
@@ -10,6 +8,8 @@ window.addEventListener('load', function () {
   setMobileMenu();
   validationForm();
   customDropList();
+  setAccordionBlockHide();
+  smoothAccordionSlide();
 });
 
 function setBodyLoaded() {
@@ -44,45 +44,70 @@ function setAnimatedBlockLoaded() {
   })
 }
 
-function widthMeter() {
-  let widthDocument = document.querySelector('body').offsetWidth;
-  if (widthDocument >= 740) {
-    return;
+function setAccordionBlockHide() {
+  const firstButton = document.getElementById('firstButton');
+  const secondButton = document.getElementById('secondButton');
+  const thirdButton = document.getElementById('thirdButton');
+
+  function buttonHider(element) {
+    const toggleCross = element.querySelector('.faq__arrow');
+    const hideMenu = element.querySelector('.faq__accordion_hide');
+    toggleCross.classList.toggle('rotate');
+    hideMenu.classList.toggle('active');
   }
-  let offsetData = document.querySelector('body');
-  offsetData.style.setProperty('--primary-width', (widthDocument - 35)+ 'px');
+
+  firstButton.addEventListener('click', evt => {
+    firstButton.querySelector('.faq__arrow').classList.toggle('rotate');
+    if (secondButton.querySelector('.faq__accordion_hide').classList.contains('active')){
+      buttonHider(secondButton);
+    }
+    if (thirdButton.querySelector('.faq__accordion_hide').classList.contains('active')){
+      buttonHider(thirdButton);
+    }
+  });
+
+  secondButton.addEventListener('click', evt => {
+    secondButton.querySelector('.faq__arrow').classList.toggle('rotate');
+    if (firstButton.querySelector('.faq__accordion_hide').classList.contains('active')){
+      buttonHider(firstButton);
+    }
+    if (thirdButton.querySelector('.faq__accordion_hide').classList.contains('active')){
+      buttonHider(thirdButton);
+    }
+  });
+
+  thirdButton.addEventListener('click', evt => {
+    thirdButton.querySelector('.faq__arrow').classList.toggle('rotate');
+    if (secondButton.querySelector('.faq__accordion_hide').classList.contains('active')){
+      buttonHider(secondButton);
+    }
+    if (firstButton.querySelector('.faq__accordion_hide').classList.contains('active')){
+      buttonHider(firstButton);
+    }
+  });
 }
 
-function widthDocumentParser () {
-  widthMeter();
-  window.addEventListener('resize', function (evt){
-    widthMeter();
+function smoothAccordionSlide() {
+  document.querySelector('.faq__container').addEventListener('click', function (event) {
+    let block = event.target.closest('.faq__accordion');
+
+    if (block) {
+      let elem = block.querySelector('.faq__accordion_hide');
+      if (elem.classList.contains('active')) {
+        elem.style.height = getComputedStyle(elem).height;
+        elem.classList.remove('active');
+        getComputedStyle(elem).height; // reflow
+        elem.style.height = '';
+      } else {
+        elem.classList.add('active');
+        let h = getComputedStyle(elem).height;
+        elem.style.height = '0';
+        getComputedStyle(elem).height; // reflow
+        elem.style.height = h;
+        setTimeout(function () { elem.style.height = '' }, 1000); // Когда закончится анимация
+      }
+    }
   })
-}
-
-function checkedDropList() {
-  let checkboxFirstList = document.getElementById('checkboxFirst');
-  let checkboxSecondList = document.getElementById('checkboxSecond');
-  let checkboxThirdList = document.getElementById('checkboxThird');
-
-  checkboxFirstList.addEventListener('click', function (evt){
-    if (checkboxFirstList.checked) {
-      checkboxSecondList.checked = '';
-      checkboxThirdList.checked = '';
-    }
-  });
-  checkboxSecondList.addEventListener('click', function (evt){
-    if (checkboxSecondList.checked) {
-      checkboxFirstList.checked = '';
-      checkboxThirdList.checked = '';
-    }
-  });
-  checkboxThirdList.addEventListener('click', function (evt){
-    if (checkboxThirdList.checked) {
-      checkboxFirstList.checked = '';
-      checkboxSecondList.checked = '';
-    }
-  });
 }
 
 function setScrollToStartPage() {
@@ -171,7 +196,7 @@ function setInteractiveParameters() {
   }
 }
 
- function validationForm() {
+function validationForm() {
   const gradeA = document.getElementById('grade-a');
   const gradeB = document.getElementById('grade-b');
   const gradeC = document.getElementById('grade-c');
@@ -203,3 +228,4 @@ function customDropList() {
     });
   });
 }
+

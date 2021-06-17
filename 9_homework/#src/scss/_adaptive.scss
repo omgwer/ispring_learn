@@ -250,8 +250,13 @@
     font: 500 36px/48px Montserrat,sans-serif;
   }
 
-  .block-faq__question {
-    margin: 0 5px;
+  .block-faq {
+    padding: 20px 10px 60px;
+
+
+    &__question {
+      margin: 0 5px;
+    }
   }
 
   .title-course__header {
@@ -390,9 +395,15 @@
     &__title {
       font-size: 6vw;
     }
+  }
 
-    &__list {
-      padding: 5px;
+  .faq {
+    &__button {
+      font-size: 20px;
+    }
+
+    &__accordion_hide {
+      font-size: 16px;
     }
   }
 
@@ -433,8 +444,16 @@
 }
 
 @media screen and (max-width: 370px) {
-  .title-course {
+  .header {
+    padding-right: 10px;
 
+    &__button-block {
+      margin-right: 0;
+      transform: scale(0.8);
+    }
+  }
+
+  .title-course {
     &__header {
       font: 600 34px/40px 'Montserrat', sans-serif;
     }

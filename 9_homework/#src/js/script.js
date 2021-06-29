@@ -3,9 +3,8 @@ window.addEventListener('load', function () {
   setAnimatedBlockLoaded();
   setScrollToStartPage();
   setMenuScrollNavigation();
-  closedPopup();
-  openPopup();
-  setMobileMenu();
+  initPopup();
+  initMobileMenu();
   validationForm();
   customDropList();
   setAccordionBlockHide();
@@ -45,52 +44,21 @@ function setAnimatedBlockLoaded() {
 }
 
 function setAccordionBlockHide() {
-  const firstButton = document.getElementById('firstButton');
-  const secondButton = document.getElementById('secondButton');
-  const thirdButton = document.getElementById('thirdButton');
-
-  function buttonHider(element) {
-    const toggleCross = element.querySelector('.faq__arrow');
-    const hideMenu = element.querySelector('.faq__accordion_hide');
-    toggleCross.classList.toggle('rotate');
-    hideMenu.classList.toggle('active');
-  }
-
-  firstButton.addEventListener('click', evt => {
-    firstButton.querySelector('.faq__arrow').classList.toggle('rotate');
-    if (secondButton.querySelector('.faq__accordion_hide').classList.contains('active')){
-      buttonHider(secondButton);
-    }
-    if (thirdButton.querySelector('.faq__accordion_hide').classList.contains('active')){
-      buttonHider(thirdButton);
-    }
-  });
-
-  secondButton.addEventListener('click', evt => {
-    secondButton.querySelector('.faq__arrow').classList.toggle('rotate');
-    if (firstButton.querySelector('.faq__accordion_hide').classList.contains('active')){
-      buttonHider(firstButton);
-    }
-    if (thirdButton.querySelector('.faq__accordion_hide').classList.contains('active')){
-      buttonHider(thirdButton);
-    }
-  });
-
-  thirdButton.addEventListener('click', evt => {
-    thirdButton.querySelector('.faq__arrow').classList.toggle('rotate');
-    if (secondButton.querySelector('.faq__accordion_hide').classList.contains('active')){
-      buttonHider(secondButton);
-    }
-    if (firstButton.querySelector('.faq__accordion_hide').classList.contains('active')){
-      buttonHider(firstButton);
-    }
+  const accordionButtons = document.querySelectorAll('.faq__accordion');
+  accordionButtons.forEach(element =>{
+    element.addEventListener('click', evt =>{
+      const triggerButton = element.querySelector('.faq__accordion_hide')
+      if (!triggerButton.classList.contains('active')) {
+        const activeDropList = document.querySelector('.active');
+        activeDropList.classList.remove('active');
+      }
+    });
   });
 }
 
 function smoothAccordionSlide() {
   document.querySelector('.faq__container').addEventListener('click', function (event) {
     let block = event.target.closest('.faq__accordion');
-
     if (block) {
       let elem = block.querySelector('.faq__accordion_hide');
       if (elem.classList.contains('active')) {
@@ -147,37 +115,32 @@ function setMenuScrollNavigation() {
   });
 }
 
-function closedPopup() {
+function initPopup() {
   const closedButton = document.querySelector('.popup_closed');
   const popupForm = document.querySelector('.popup');
   const overlay = document.querySelector('.overlay');
-
-  closedButton.addEventListener('click', function (evt){
-    evt.preventDefault();
-    popupForm.classList.add('visually-hidden');
-    overlay.classList.add('visually-hidden');
-  })
-  overlay.addEventListener('click', function (evt){
-    evt.preventDefault();
-    popupForm.classList.add('visually-hidden');
-    overlay.classList.add('visually-hidden');
-  })
-}
-
-function openPopup() {
   const popupButtons = document.querySelectorAll('.js-button-join');
-  const popupForm = document.querySelector('.popup');
-  const overlay = document.querySelector('.overlay');
+  const VISUALLY_HIDDEN = 'visually-hidden';
+
+  function hiderPopup(command, evt) {
+    evt.preventDefault();
+    if (command) {
+      popupForm.classList.add(VISUALLY_HIDDEN);
+      overlay.classList.add(VISUALLY_HIDDEN);
+    } else {
+      popupForm.classList.remove(VISUALLY_HIDDEN);
+      overlay.classList.remove(VISUALLY_HIDDEN);
+    }
+  }
+
+  closedButton.addEventListener('click', hiderPopup.bind(null, 'closePopup'));
+  overlay.addEventListener('click', hiderPopup.bind(null, 'closePopup'));
   popupButtons.forEach(popupButton => {
-    popupButton.addEventListener('click', evt => {
-      evt.preventDefault();
-      popupForm.classList.remove('visually-hidden');
-      overlay.classList.remove('visually-hidden');
-    })
+    popupButton.addEventListener('click', hiderPopup.bind(null, null));
   })
 }
 
-function setMobileMenu() {
+function initMobileMenu() {
   const burgerButton = document.querySelector('.burger-open');
   const navigationMenu = document.querySelector('.header__links');
   burgerButton.addEventListener('click', evt => {
@@ -197,20 +160,14 @@ function setInteractiveParameters() {
 }
 
 function validationForm() {
-  const gradeA = document.getElementById('grade-a');
-  const gradeB = document.getElementById('grade-b');
-  const gradeC = document.getElementById('grade-c');
   const feedbackProffession = document.querySelector('.feedback-form__container');
-  gradeA.addEventListener('click', evt =>{
-    feedbackProffession.classList.add('valid');
-  });
-   gradeB.addEventListener('click', evt =>{
-     feedbackProffession.classList.add('valid');
-   });
-   gradeC.addEventListener('click', evt =>{
-     feedbackProffession.classList.add('valid');
-   });
-  }
+  const optionList = feedbackProffession.querySelectorAll('.option');
+  optionList.forEach(option => {
+    option.addEventListener('click', evt =>{
+      feedbackProffession.classList.add('valid');
+    })
+  })
+}
 
 function customDropList() {
   const selected = document.querySelector(".selected");
@@ -228,4 +185,3 @@ function customDropList() {
     });
   });
 }
-

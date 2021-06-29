@@ -97,8 +97,6 @@
     }
   }
 
-
-
   &__name,
   &__email,
   &__job-block {
@@ -133,14 +131,14 @@
     color: #999999;
   }
 
-  &__name:valid,
-  &__email:valid {
-    box-shadow: 0 0 10px 1px #ee75c1;
+  &__container {
   }
-}
 
-.valid {
-  box-shadow: 0 0 10px 1px #ee75c1;
+  &__name:invalid,
+  &__email:invalid {
+    box-shadow: 0 0 5px 1px rgba(239, 7, 15, 0.25);
+    border: 1px solid rgba(224, 14, 14, 0.62);
+  }
 }
 
 .feedback-form__container:checked {
@@ -257,10 +255,7 @@
 .top-text-wrapper {
   margin: 20px 0 30px 0;
 }
-.top-text-wrapper h4{
-  font-size: 24px;
-  margin-bottom: 10px;
-}
+
 .top-text-wrapper code{
   font-size: .85em;
   background: linear-gradient(90deg,#fce3ec,#ffe8cc);
@@ -303,8 +298,14 @@
   //margin-bottom: 8px;
   position: relative;
   border-radius: 4px;
-  border: 1.35px solid silver;
   order: 0;
+  box-shadow: 0 0 5px 1px rgba(239, 7, 15, 0.25);
+  border: 1px solid rgba(224, 14, 14, 0.62);
+}
+
+.valid .selected {
+  border: 1.35px solid #c0c0c0;
+  box-shadow: none;
 }
 
 .selected::after {
@@ -323,7 +324,7 @@
   transform: translateY(-50%);
 }
 
-.selected h3, .select-box label h3 {
+.selected span, .select-box label span {
   font: 500 18px/22px 'Montserrat', sans-serif;
   color: #999999;
 }

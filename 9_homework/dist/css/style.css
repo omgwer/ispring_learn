@@ -763,15 +763,11 @@ input:-webkit-autofill:active {
   color: #999999;
 }
 
-.feedback-form__name:valid,
-.feedback-form__email:valid {
-  -webkit-box-shadow: 0 0 10px 1px #ee75c1;
-          box-shadow: 0 0 10px 1px #ee75c1;
-}
-
-.valid {
-  -webkit-box-shadow: 0 0 10px 1px #ee75c1;
-          box-shadow: 0 0 10px 1px #ee75c1;
+.feedback-form__name:invalid,
+.feedback-form__email:invalid {
+  -webkit-box-shadow: 0 0 5px 1px rgba(239, 7, 15, 0.25);
+          box-shadow: 0 0 5px 1px rgba(239, 7, 15, 0.25);
+  border: 1px solid rgba(224, 14, 14, 0.62);
 }
 
 .feedback-form__container:checked {
@@ -909,11 +905,6 @@ input:-webkit-autofill:active {
   margin: 20px 0 30px 0;
 }
 
-.top-text-wrapper h4 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
 .top-text-wrapper code {
   font-size: .85em;
   background: -webkit-gradient(linear, left top, right top, from(#fce3ec), to(#ffe8cc));
@@ -968,10 +959,18 @@ input:-webkit-autofill:active {
   height: 64px;
   position: relative;
   border-radius: 4px;
-  border: 1.35px solid silver;
   -webkit-box-ordinal-group: 1;
       -ms-flex-order: 0;
           order: 0;
+  -webkit-box-shadow: 0 0 5px 1px rgba(239, 7, 15, 0.25);
+          box-shadow: 0 0 5px 1px rgba(239, 7, 15, 0.25);
+  border: 1px solid rgba(224, 14, 14, 0.62);
+}
+
+.valid .selected {
+  border: 1.35px solid #c0c0c0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .selected::after {
@@ -996,8 +995,8 @@ input:-webkit-autofill:active {
           transform: translateY(-50%);
 }
 
-.selected h3,
-.select-box label h3 {
+.selected span,
+.select-box label span {
   font: 500 18px/22px 'Montserrat', sans-serif;
   color: #999999;
 }
@@ -1067,6 +1066,10 @@ input:-webkit-autofill:active {
   .feedback-form__submit {
     margin: 10px auto;
   }
+
+  .block-faq {
+    padding-bottom: 25px;
+  }
 }
 
 @media screen and (max-width: 1300px) {
@@ -1123,10 +1126,18 @@ input:-webkit-autofill:active {
     grid-gap: 20px;
   }
 
+  .content__title {
+    margin-bottom: 0;
+  }
+
   .content__image {
     margin: 0 auto;
     width: 50%;
     height: 50%;
+  }
+
+  .content__image:first-child {
+    margin-bottom: 50px;
   }
 
   .content__text {
@@ -1141,6 +1152,10 @@ input:-webkit-autofill:active {
   .content__block:last-child {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+
+  .main__row-block {
+    margin-top: 50px;
   }
 
   .feedback-form__submit {
@@ -1162,7 +1177,7 @@ input:-webkit-autofill:active {
 
 @media screen and (max-width: 1115px) {
   .feedback-block {
-    padding: 30px 0 45px;
+    padding: 65px 0 85px;
     height: auto;
   }
 
@@ -1177,6 +1192,10 @@ input:-webkit-autofill:active {
 
   .feedback-form__group {
     display: block;
+  }
+
+  .block-faq {
+    padding-bottom: 65px;
   }
 }
 
@@ -1512,7 +1531,7 @@ input:-webkit-autofill:active {
     margin: 15px 5px;
   }
 
-  __image {
+  .title-course__image {
     width: 100%;
     height: 100%;
   }
